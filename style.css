@@ -1,0 +1,46 @@
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      button {
+        width: 50%;
+        height: 3rem;
+        margin: 1rem;
+      }
+      .contenedor1 {
+        width: 90%;
+      }
+  
+      .input {
+        height: 2rem;
+        display: block;
+        margin: 0.5rem 0 0.5rem 0;
+        width: 100%;
+      }
+  
+      .constante {
+        outline: 1px solid green;
+      }
+  
+      .variable {
+        outline: 1px solid red;
+      }
+  
+      .resaltado {
+        outline: 3px solid deeppink;
+      }
+      h1,
+      h2,
+      h3,
+      p {
+        text-align: center;
+      }

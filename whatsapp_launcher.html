@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WtsApp launcher</title>
+    <link rel="icon" href="./favicon.ico" />
+  </head>
+
+  <link rel="stylesheet" href="./style.css" />
+
+  <script src="./main.js"></script>
+
+  <body onload="appLoad()">
+    <header class="contenedor1">
+      <h1>Compaginador de comandos para enviar mensajes por WEB o PC APP en what's app</h1>
+      <h2>
+        Esta app fabrica la dirección web (y la abre en una nueva pestaña) a la que debes acceder para enviar
+        mensajes mediante comandos en la URL, permitiendo tanto enviar mensajes
+        a personas que no están en los contactos como también crear sucesivos mensajes de texto con
+        partes fijas y variables. No interactúa directamente con what's app.
+      </h2>
+     
+    </header>
+
+    <main class="contenedor1">
+      <input
+        class="input constante"
+        type="text"
+        id="prefijoNacional"
+        placeholder='Prefijo del país, por ejemplo: "34" '
+      />
+      <h2 class="" style="color: deeppink">
+        Si sólo quieres enviar un mensaje a alguien que no tienes en contactos, sólo pon el número completo (con su prefijo
+        internacional) y presiona «Crear mensaje»
+      </h2>
+      <input
+        class="input variable resaltado"
+        type="text"
+        id="telefono"
+        placeholder="Escribe (o arrastra y suelta, o copia y pega) aquí el número de teléfono"
+      />
+      <p style="margin: 0%">
+        Para enviar múltiples mensajes (por ejemplo respondiendo a varios avisos
+        de alquiler de casa) utiliza los siguientes campos.
+      </p>
+      <p style="margin: 0%">
+        Si todos los teléfonos son de un mismo país, usa el campo «prefijo del
+        país» y en el campo «teléfono» sólo pon el número nacional.
+      </p>
+      <input
+        class="input constante"
+        type="text"
+        id="primerTextoConstante"
+        placeholder='Texto constante inicial, por ejemplo: "Hola, " '
+      />
+
+      <input
+        class="input variable"
+        type="text"
+        id="primerTextoVariable"
+        placeholder="Escribe (o arrastra y suelta, o copia y pega) aquí, por ejemplo, el nombre (u otra cosa que te sirva)"
+      />
+      <input
+        class="input constante"
+        type="text"
+        id="segundoTextoConstante"
+        placeholder='Texto constante, por ejemplo "vi tu aviso de alquiler de "'
+      />
+
+      <input
+        class="input variable"
+        type="text"
+        id="segundoTextoVariable"
+        placeholder="Escribe (o arrastra y suelta, o copia y pega) aquí, por ejemplo, la dirección (u otra cosa que te sirva)"
+      />
+      <input
+        class="input constante"
+        type="text"
+        id="ultimoTextoConstante"
+        placeholder='Texto constante final, por ejemplo "¿En qué horario podría pasar a verlo? Saludos" '
+      />
+      <button onclick="lanzar()" class="resaltado">Crear mensaje (y abrir en una nueva pestaña)</button>
+      <button onclick="guardarTextosConstantes()">
+        Guardar textos constantes
+      </button>
+
+      <button onclick="blanquearTextosConstantes()">
+        Blanquear textos constantes
+      </button>
+      <p>Debes tener la versión web o app de whatsapp instalada y/o logueada</p>
+      <p>
+        Textos en caja roja se resetean al crear cada mensaje, textos en caja
+        verde permanecen hasta cerrar la página, salvo que se los guarde.
+      </p>
+      <p>
+        Puedes usar esta página web, o si eres un poco más avanzado, bajarte los
+        archivos httml, js y css a un directorio en tu PC y funcionará también
+        en local
+      </p>
+      <p>
+        Permitida e incluso incentivada la copia y mejoramiento de esta app
+        (sólo pido mención del repositorio original de github que viene a
+        continuación), hice la interface tosca a propósito, pues si bien podría
+        hacer algo más amigable, jamás llegaría a tener la calidad de alguien
+        que se dedica o está estudiando frontend/UX/UI y me gusta dejarle lugar
+        a los que saben más que yo en algo
+      </p>
+      <p>
+        <a href="https://github.com/vgrusz/lanzador_de_whatsapp_espanol">
+          Repositorio en Github</a
+        >
+      </p>
+      <p>
+        Aclaración: esta app no interactúa directamente con what's app, sólo crea
+        una URL y abre una nueva pestaña del navegador con esa URL. Esta app no
+        tiene mantenimiento, en el futuro puede dejar de funcionar. Es
+        extremadamente improbable pero al momento de su uso podría existir
+        alguna clase de normativa de what's app que penalizara de alguna forma el
+        uso de llamadas a sus URLs. Caveat emptor
+      </p>
+    </main>
+  </body>
+</html>
